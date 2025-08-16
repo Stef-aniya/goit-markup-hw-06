@@ -43,12 +43,12 @@ p{
 }
 @media screen and (min-width:768px) {
     .container{
-        max-with: 768px;
+        max-width: 768px;
     }
 }
 @media screen and (min-width:1158px) {
     .container{
-        max-with: 768px;
+        max-width: 768px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -69,6 +69,9 @@ p{
 .adres-clas{
     display: none;
 }
+.header-logo{
+    margin-right: 120px;
+}
 .logo{
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -87,6 +90,7 @@ p{
 .burger-btn{
     padding: 0px;
     background-color: transparent;
+    border: none;
 }
 .burger-icon{
     display: block;
@@ -107,15 +111,16 @@ p{
     margin-bottom: 48px;
 }
 .section-solutions{
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 204px;
     background-color: #2E2F42;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpeg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile.jpg),url(../images/mobile@2x.jpg);
     background-position: center;
+    max-width: 767;
 }
 .button-order{
     background-color: #4d5ae5;
@@ -173,17 +178,21 @@ overflow: hidden;
     gap: 24px;
     padding: 0;
     list-style: none;
+    
 }
-
+.strategy-li{
+    min-width: 288px;
+}
 .section-team{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 .shadow{
     color: #FFFFFF
 }
 .section-team{
     background-color: #F4F4FD;
+    padding: 96px 28px;
 }
 .our-team{
     font-weight: 700;
@@ -206,7 +215,6 @@ overflow: hidden;
 }
 .team-person{
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);;
 }
@@ -218,6 +226,28 @@ overflow: hidden;
     text-align: center;
     color:#434455;
 }
+.team-icons-list{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 72px;
+}
+.team-icons{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+}
+.team-icons:hover,
+.team-icons:focus {
+    background-color: #404bbf;
+}
+.svg-team{
+    fill: #F4F4FD;
+}
 .portfolio{
     font-weight: 700;
     font-size: 36px;
@@ -228,6 +258,9 @@ overflow: hidden;
     color: #2E2F42;
     margin-bottom: 72px;
     margin-bottom: 96px;
+}
+.strategy-li{
+    min-width: 288px;
 }
 .port-ul{
     display: flex;
@@ -274,6 +307,10 @@ margin-bottom: 8px;
     padding-top: 48px;
     border: 1px solid #e7e9fc;
     border-top: none;
+}
+.cont-img-portf{
+    position: relative;
+    overflow: hidden;
 }
 .page-footer{
     display: flex;
@@ -700,6 +737,10 @@ margin-bottom: 16px;
         }
 
 @media screen and (min-width:768px){
+    .section-solutions{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Tablet.jpg),url(../images/Tablet@2x.jpg);
+        max-width: 1157;
+    }
     .burger-btn{
         display: none;
     }
@@ -771,11 +812,13 @@ margin-bottom: 16px;
         gap: 12px;
     }
     .menu-list-link{
+        font-size: 12px;
+        font-weight: 400;
         color: #434455;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        padding-bottom: 24px;
-        padding-top: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        padding-bottom: 12px;
+        padding-top: 12px;
         display: block;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -804,18 +847,21 @@ margin-bottom: 16px;
         max-width: 1157;
         height: 600px;
     }
+    .main-items{
+        padding-right: 16px;
+        text-align: left;
+    }
     .strategy-ul{
     display: inline-flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
+}
+.section{
+    padding: 96px 16px 96px 16px;
 }
     .strategy-li{
-        width: calc((100% - 72px) / 4); 
-        margin-left: 16px;
-        margin-right:24px ;
-        max-width: 356px;
-        max-height: 120px;
+        width: calc((100% - 24px) /2); 
 }
     .shadow{
     color: #FFFFFF
@@ -827,15 +873,18 @@ margin-bottom: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+.section-team{
+    padding: 96px 16px;
+}
 .team-ul{
-    display: inline-flex;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 64px 24px;
 }
 .team-person{
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 64px) / 2);
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);;
     max-width: 264px;
@@ -887,10 +936,26 @@ margin-bottom: 16px;
     margin-bottom: 72px;
     margin-bottom: 96px;
 }
+.head-portfolio{
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #2E2F42;
+margin-bottom: 8px;
+}
+.li-portf{
+    width: calc((100% - 24px) / 2);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.li-portf:hover .over-portf {
+    transform: translateY(0%);
+}
 .port-ul{
-    display: inline-flex;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    width: calc((100% - 24px) / 2);
 }
 .main-portfolio{
 font-weight: 400;
@@ -920,7 +985,7 @@ color: #434455;
 }
 .container-portf{
     border-top: none;
-    padding: 32px 16px;
+    padding: 72px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
@@ -956,15 +1021,13 @@ justify-content: center;
 margin-bottom: 16px;
 
 }
-.foot-container{
+/* .foot-container{
     display: inline-flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: baseline;
-}
-.logo-foot-part{
-    margin-right: 120px;
-}
+} */
+
 .link-foot-icons{
     display: flex;
     gap: 16px;
@@ -1025,6 +1088,7 @@ margin-bottom: 16px;
     align-items: center;
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
 }
 .foot-inpt {
     width: 264px;
@@ -1044,9 +1108,6 @@ margin-bottom: 16px;
 }
 .foot-link-sub{
     margin-bottom: 16px;
-}
-.cont-foot{
-margin-left: auto;
 }
 .label-foot{
     margin-left: auto;
@@ -1444,7 +1505,7 @@ color: #404bbf;
     margin-right: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpeg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpeg), url(../images/Tablet@2x.jpg);
     background-position: center;
 }
 .button-order{
@@ -1512,6 +1573,7 @@ overflow: hidden;
     color: #2E2F42;
     font-weight: 500;
     margin-bottom: 8px;
+    text-align: left;
 }
 .main-items-prg{
     font-size: 16px;
