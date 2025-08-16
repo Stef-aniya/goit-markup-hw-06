@@ -168,6 +168,13 @@ overflow: hidden;
     color: #2E2F42;
     font-weight: 500;
 }
+.strategy-ul{
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+}
+
 .section-team{
     display: flex;
     flex-direction: column;
@@ -224,7 +231,7 @@ overflow: hidden;
 }
 .port-ul{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 .li-portf{
     width: calc((100% - 48px) / 3);
