@@ -530,6 +530,7 @@ margin-bottom: 8px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .rewiew-popup{
     display: flex;
     justify-content: center;
@@ -552,7 +553,8 @@ margin-bottom: 8px;
     visibility: visible;
 }
 .rewiew-popup-wrapper{
-    min-width: 288px;
+    box-sizing: border-box;
+    width: 288px;
     height: 80%;
     min-height: 623px;
     overflow-y: auto;
@@ -620,7 +622,9 @@ margin-bottom: 8px;
 .form-mod{
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 136;
+    padding-top: 32px;
+    width: 256px;
+    height: 336px;
 }
 .form-field-wrapper{
     margin-bottom: 8px;
@@ -638,7 +642,7 @@ margin-bottom: 8px;
 .form-field-text-input{
     height: 40px;
     border-radius: 4px;
-    width: 100%;
+    width: 256px;
     padding-left: 24px;
     padding-right: 24px;
     outline: none;
@@ -660,7 +664,7 @@ margin-bottom: 8px;
     resize: none;
     width: 100%;
     border-radius: 4px;
-    width: 360px;
+    width: 256px;
     height: 120px;
     font-size: 12px;
     line-height: 1.17; 
@@ -797,7 +801,115 @@ margin-bottom: 8px;
 .svg{
     fill: #FFFFFF;
 }
-.mobile-menu{
+    .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px; 
+    }
+
+    
+    .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    }
+
+    
+    .ul-mob-menu-nav {
+    list-style: none;
+    padding: 0;
+    margin: 72px 0 0 0; 
+    }
+
+    .mob-menu-list {
+    margin-bottom: 40px; 
+    }
+
+    .mobile-menu-text {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #2E2F42;
+    }
+
+    .mobile-menu-text.current {
+    color: #4D5AE5; 
+    }
+
+    
+    .adres-mobile {
+    font-style: normal;
+    margin-top: 168px; 
+    }
+
+    .ad-ul-mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .mob-menu-list-item {
+    margin-bottom: 24px; 
+    }
+
+    .mob-menu-list-link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration: none;
+    color: #434455;
+    }
+    .mobile-svg{
+        fill: #2E2F42;
+    }
+
+    .mob-menu-list-link[href^="tel"] {
+    color: #4D5AE5; 
+    font-size: 24px;
+    font-weight: 700;
+    }
+    .mobile-menu-container-icons {
+    margin-top: 48px; 
+    display: flex;
+    justify-content: center;
+    }
+
+    .link-menu-mob-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    }
+
+    .team-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+    }
+
+    .svg-team {
+    fill: #fff;
+    width: 24px;
+    height: 24px; 
+    }
+/* .mobile-menu{
             position: fixed;
             top: 0;
             left: 0;
@@ -830,7 +942,34 @@ margin-bottom: 8px;
         .mobile-menu-nav{
             margin-bottom: auto;
         }
+        .link-menu-mob-icons{
+            display: flex;
+            gap: 48px 40px;
+        }
+        .mob-menu-list-item{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+        }
+        .ad-ul-mobile{
+            display: flex;
+            gap: 40px;
+        }
+        .ul-mob-menu-nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-menu-text current{
+            color: #4D5AE5;
+        }
+        .mob-menu-list{
+
+        } */
 @media screen and (min-width:768px){
+    .mobile-menu{
+        display: none;
+    }
     .menu-list-link{
         margin-top: 12px;
         font-size: 12px;
@@ -1059,6 +1198,9 @@ margin-bottom: 8px;
         width: 408px;
         height: 80%;
         min-height: 584px;
+    }
+    .for-mobile{
+        display: none;
     }
 }
 
@@ -1291,6 +1433,9 @@ color: #434455;
     width: 408px;
     height: 80%;
     min-height: 584px;
+}
+.for-mobile{
+    display: none;
 }
 }
 
