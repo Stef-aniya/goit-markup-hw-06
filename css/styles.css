@@ -801,6 +801,8 @@ margin-bottom: 8px;
 .svg{
     fill: #FFFFFF;
 }
+
+/* Mobile */
     .mobile-menu {
     position: fixed;
     top: 0;
